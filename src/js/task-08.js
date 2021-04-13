@@ -23,14 +23,12 @@ function createBoxes() {
     boxesArray.append(newBox);
   }
 }
-
-clearItemsBtn.addEventListener("click", destroyBoxes);
-
 function destroyBoxes() {
-  //   boxesArray.innerHTML = "";
-
-  clearItemsBtn.addEventListener("click", () => {
-    inputNumber.querySelectorAll("div").forEach((item) => item.remove());
-  });
-  // inputNumber.value = "";
+    let element = document.querySelectorAll('.newBox');
+    element.forEach(el => {
+        el.parentNode.removeChild(el);
+    });
+  inputNumber.value = "";
+    return boxesArray = [];
 }
+clearItemsBtn.addEventListener('click', destroyBoxes);
